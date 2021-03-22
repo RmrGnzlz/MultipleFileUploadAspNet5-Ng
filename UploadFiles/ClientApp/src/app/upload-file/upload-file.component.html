@@ -1,0 +1,12 @@
+<label class="btn btn-secondary" (click)="fileInput.value = null">
+  Choose Files
+  <input
+    #fileInput
+    type="file"
+    style="display: none"
+    (change)="chooseFile(fileInput.files)"
+    multiple
+  />
+</label>
+<br />
+<button type="button" class="btn btn-primary mt-2" (click)="uploadFiles()">Upload</button>
